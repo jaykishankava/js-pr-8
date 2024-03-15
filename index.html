@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>counter</title>
+</head>
+<body>
+    <h1 align="center"><em>Counter App</em></h1>
+    <center>
+    <button onclick="incriment()">+</button>
+    <span id="msg">counter</span>
+    <button onclick="dcriment()">-</button>
+    <button id="reset" onclick="reset()">Reset</button>
+</center>
+</body>
+</html>
+
+<style>
+    button{
+        width: 150px;
+        height: 70px;
+        margin: 15px;
+        border-radius: 50px;
+        background-color: #123456;
+        color: white;
+        font-size: 25px;
+    }
+   #reset{
+    margin: 15px auto;
+    display: block;
+   }
+   #msg{
+    width: 150px;
+    height: 70px;
+    font-size:45px;
+    display: inline-block;
+    background-color: wheat;
+    border-radius: 50px;
+    line-height: 65px;
+    border: 2px solid #123456 ;
+   }
+</style>
+
+<script type="text/javascript">
+   let cnt=0;
+    document.getElementById('msg').innerHTML=`${cnt}`
+
+    const incriment = () => {
+        cnt++;
+        document.getElementById('msg').innerHTML=`${cnt}`
+    }
+    const dcriment = () => {
+        if(cnt>0){
+            cnt--;
+        }
+        document.getElementById('msg').innerHTML=`${cnt}`
+    }
+    const reset = () => {
+        cnt = 0;
+        document.getElementById('msg').innerHTML=`${cnt}`
+    }
+</script>
